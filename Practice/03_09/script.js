@@ -24,3 +24,16 @@ const backpack = {
     this.strapLength.right = lengthRight;
   },
 };
+
+// Methods for 'backpack' object
+console.log("The backpack object:", backpack);
+
+// Method to change the name of the backpack
+backpack.changeName = function (newName) {
+  this.name = newName;  
+
+};
+
+
+
+
