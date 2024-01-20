@@ -7,4 +7,8 @@ let item = "flashlight";
 
 const collection = ["Piggy", item, 5, true];
 
-console.log(collection);
+collection[2] = "camera";
+collection[collection.length] = "new item";
+collection[9] = "at the end";
+
+console.log(collection[2]);
