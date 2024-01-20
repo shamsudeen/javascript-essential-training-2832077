@@ -5,7 +5,11 @@
 
 let backpackContents = ["piggy", "headlamp", "pen"];
 
-console.log(backpackContents);
+// .push() - adds one or more items to the end of an array and returns new
+console.log(backpackContents); // Output: piggy, headlamp, pen
+// backpackContents.unshift("pencil", 5);
+
+console.log(backpackContents.join(" | "));
 
 // backpackContents.forEach(function (item) {
 //   item = `<li>${item}</li>`;
