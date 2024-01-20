@@ -22,3 +22,47 @@ console.log(backpackContents.join(" | "));
 //   }
 // });
 // console.log("longItems:", longItems);
+
+// newDeskArr.pop()
+// Removes the last element from an array and returns that element. This method changes the length
+// of the array.
+// newDeskArray.sort()
+
+// eslint-disable-next-line no-irregular-whitespace
+// JavaScript code​​​​​​‌​‌​‌​‌​​‌‌‌​‌​‌‌​‌​‌‌​​‌ below
+// Write your answer here, then test your code.
+
+// Change these boolean values to control whether you see 
+// the expected answer and/or hints
+// const showExpectedResult = false;
+// const showHints = false;
+
+// const deskArray = [
+//     "pen",
+//     "camera",
+//     "phone",
+//     "notebook",
+//     "headphones",
+//     "laptop",
+//     "light bulb",
+//     "USB drive",
+//     "elephant"
+// ];
+
+// const processArray = deskArray => {
+
+//     let newDeskArr = [...deskArray];
+
+//     // Your code goes here
+//     newDeskArr.pop()
+//     newDeskArr.sort()
+//     newDeskArr.unshift(newDeskArr.pop())
+//     const usbIndex = newDeskArr.indexOf("USB drive")
+//     newDeskArr.push(newDeskArr.splice(usbIndex, 1))
+
+//     const laptopIndex = newDeskArr.indexOf("laptop")
+//     newDeskArr.splice(laptopIndex, 1)
+//     // Your code ends here
+
+//     return newDeskArr;
+// };
