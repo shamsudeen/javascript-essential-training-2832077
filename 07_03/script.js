@@ -28,6 +28,16 @@ console.log(backpackContents.join(" | "));
 // of the array.
 // newDeskArray.sort()
 
+ var numbers = [1, 2, 3, 4, 5];
+ numbers.push(6);
+ numbers.unshift(7);
+ numbers.pop();
+ numbers.shift(); //1,2,3,4,5
+
+
+
+
+
 // eslint-disable-next-line no-irregular-whitespace
 // JavaScript code​​​​​​‌​‌​‌​‌​​‌‌‌​‌​‌‌​‌​‌‌​​‌ below
 // Write your answer here, then test your code.
