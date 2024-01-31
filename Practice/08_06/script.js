@@ -61,3 +61,53 @@ console.log(createArticle({ title: 'This is a test' }));
 
 // </body>
 // </html>
+
+// find an element
+// make a change to it
+// call the function
+// confirm that it works
+// repeat with an arrow function
+
+// <!DOCTYPE html>
+// <html lang="en">
+// <head>
+//     <meta charset="UTF-8">
+//     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+//     <title>JavaScript Practice</title>
+// </head>
+// <body>
+
+//     <div id="myElement">Original Text</div>
+
+//     <script>
+//         // Function to find an element, make a change, and call the function
+//         function manipulateElement() {
+//             const element = document.querySelector('#myElement');
+            
+//             // Make a change to the element
+//             element.textContent = "Text Changed";
+//             element.style.color = "blue";
+
+//             console.log("Function called! Element changed.");
+//         }
+
+//         // Call the function
+//         manipulateElement();
+
+//         // Repeat with an arrow function
+//         const manipulateElementArrow = () => {
+//             const element = document.querySelector('#myElement');
+            
+//             // Make a change to the element
+//             element.textContent = "Text Changed by Arrow Function";
+//             element.style.color = "green";
+
+//             console.log("Arrow Function called! Element changed.");
+//         };
+
+//         // Call the arrow function
+//         manipulateElementArrow();
+//     </script>
+
+// </body>
+// </html>
