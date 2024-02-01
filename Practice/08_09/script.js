@@ -57,3 +57,44 @@ const content = `
       }</span></li>
     </ul>  
 `;
+
+document.write(content);
+
+// Add event listener for the lid feature
+document.querySelector(".backpack__lid").addEventListener("click", () => {
+  const currentStatus = frogpack.lidOpen;
+  // Toggle lid status and update UI accordingly
+  frogpack.toggleLid(!currentStatus);
+  document.querySelector(
+    ".backpack__lid .feature-value"
+  ).textContent = `${frogpack.lidOpen ? "open" : "closed"}`;
+});
+
+// Function to generate a random number between min and max (inclusive)
+function getRandomIntInclusive(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+// Generate new volume if it's not already set
+if (!frogpack.volume) {
+  let vol = getRandomIntInclusive(50, 80);
+  while (vol > 90 || vol <= 30) {
+    vol = getRandomIntInclusive(30, 90);
+  }
+  frogpack.setVolume(vol);
+}
+
+const volumeSlider = document.getElementById("volume");
+volumeSlider.value = frogpack.volume;
+
+volumeSlider.oninput = function () {
+  frogpack.setVolume(this.value);
+};
+// Update UI when volume is changed programmatically
+frogpack.on("volumeChanged", () => {  
+  volumeSlider.value = frogpack.volume;
+  document.querySelector(
+    ".backpack__volume .feature-value"
+  ).textContent = `${frogpack.volume}%`;
+});
+
