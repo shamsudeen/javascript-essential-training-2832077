@@ -5,6 +5,7 @@
 
 const stuff = ["piggy", "headlamp", "pen", "pencil", "eraser", "water bottle"];
 
+// eslint-disable-next-line no-unused-vars
 const nestedObjects = {
   item01: {
     name: "piggy",
@@ -31,6 +32,7 @@ const nestedObjects = {
     type: "tool",
     weight: 40,
   },
+  // eslint-disable-next-line no-dupe-keys
   item03: {
     name: "water bottle",
     type: "equipment",
@@ -46,31 +48,27 @@ let stuffList = document.createElement("ul");
  * for loop
  * @link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for
  */
-for (let i = 0; i < stuff.length; i++) {
-  let listItem = document.createElement("li");
-  listItem.innerHTML = stuff[i];
-  stuffList.append(listItem);
-}
+// for (let i = 0; i < stuff.length; i++) {
+//   let listItem = document.createElement("li");
+//   listItem.innerHTML = stuff[i];
+//   stuffList.append(listItem);
+// }
 
 /**
  * for...of loop and arrays
  * @link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of
  */
-// for (const item of stuff) {
-//   let listItem = document.createElement("li");
-//   listItem.innerHTML = item;
-//   stuffList.append(listItem);
-// }
+//it-help.amazon.com/arch
 
 /**
  * foreach array method
  * @link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach
  */
-// stuff.forEach((item) => {
-//   let listItem = document.createElement("li");
-//   listItem.innerHTML = item;
-//   stuffList.append(listItem);
-// });
+stuff.forEach((item) => {
+  let listItem = document.createElement("li");
+  listItem.innerHTML = item;
+  stuffList.append(listItem);
+});
 
 /**
  * for...in loop and objects
@@ -81,6 +79,5 @@ for (let i = 0; i < stuff.length; i++) {
 //   listItem.innerHTML = `Name: ${nestedObjects[singleObject].name}`;
 //   stuffList.append(listItem);
 // }
-
 
 article.append(stuffList);
