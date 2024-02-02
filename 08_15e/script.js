@@ -22,3 +22,6 @@ stuffItems.forEach((item) => {
 
 // Append stuffList to the <article>
 article.append(stuffList);
+
+console.log("stuff:", stuff)
+console.log("stuffItems", stuffItems)
