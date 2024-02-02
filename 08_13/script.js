@@ -56,20 +56,42 @@ main.append(newArticle);
 
 const usedStatus = () => {
   let age = everydayPack.backpackAge();
+  age = 29;
   let description;
-  if (age >= 30) {
-    if (age >= 365) {
-      if (age >= 1095) {
-        description = "old";
-      } else {
-        description = "used";
-      }
-    } else {
-      description = "lightly used";
-    }
-  } else {
-    description = "new";
+  
+  switch (true) {
+    case  age < 30:
+      description = "This bag is in excellent condition.";
+      break;
+    case age >= 30 && age < 365:
+      description = "This bag has some wear and tear, but it can still be used for daily purposes.";
+      break;
+    case age >= 365 && age < 1095:
+      description = "This bag is showing signs of heavy use. It may not be suitable for all activities or environments.";
+      break;
+    case age >= 1095:
+      description = "This bag is no longer usable. It may have been damaged or was not properly cared for.";
+      break;
+    default:
+      console.log(`There is no description for ${age}.`)
   }
+  
+  
+  
+  
+  // if (age >= 30) {
+  //   if (age >= 365) {
+  //     if (age >= 1095) {
+  //       description = "old";
+  //     } else {
+  //       description = "used";
+  //     }
+  //   } else {
+  //     description = "lightly used";
+  //   }
+  // } else {
+  //   description = "new";
+  // }
 
   console.log(`
   Age: ${age} days
