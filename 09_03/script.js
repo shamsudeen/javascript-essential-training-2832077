@@ -3,6 +3,7 @@
  * @link https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener
  * @link https://developer.mozilla.org/en-US/docs/Web/Events
  */
+
 import backpackObjectArray from "./components/data.js";
 
 const backpackList = backpackObjectArray.map((backpack) => {
@@ -39,6 +40,15 @@ const backpackList = backpackObjectArray.map((backpack) => {
     <button class="lid-toggle">Open lid</button>
   `;
 
+// Add event listener to the button that toggles the lid
+  const toggleButton = backpackArticle.querySelector(".lid-toggle")
+  const status = backpackArticle.querySelector(".backpack__lid span");
+  toggleButton.addEventListener("click", (event) => {
+  console.log(event)
+  status.innerText === "open"  ? status.innerText = "closed" : status.innerText = "open";
+  
+
+})
   return backpackArticle;
 });
 
